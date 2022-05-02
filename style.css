@@ -1,0 +1,103 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f4f6f4;
+}
+
+.btn {
+	border: none;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 70px;
+	width: 140px;
+	height: 60px;
+	background-color: #d9d2e9;
+	border-radius: 30px;
+	font-family: "Nunito", sans-serif, Arial;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+
+.btn:active {
+	transform: translate(0, 3px);
+	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.main-field {
+	background-color: #d9d2e9;
+	position: relative;
+	width: 480px;
+	height: 480px;
+	margin: 0 auto;
+	margin-top: 140px;
+	border-radius: 30px;
+}
+
+.cell {
+	position: relative;
+	float: left;
+	width: 160px;
+	height: 160px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: black;
+	transition: all 0s;
+}
+
+.active--0 {
+	background-image: url(images/cross.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.active--1 {
+	background-image: url(images/circle.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.won--0 {
+	background-image: url(images/cross-won.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.won--1 {
+	background-image: url(images/circle-won.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#cell--0,
+#cell--1,
+#cell--2 {
+	border-top: none;
+}
+
+#cell--2,
+#cell--5,
+#cell--8 {
+	border-right: none;
+}
+
+#cell--6,
+#cell--7,
+#cell--8 {
+	border-bottom: none;
+}
+
+#cell--0,
+#cell--3,
+#cell--6 {
+	border-left: none;
+}
