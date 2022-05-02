@@ -43,7 +43,7 @@ const moveGen = function (side) {
 		generateMove = 7;
 	} else if (fieldMatrix[4] === side && fieldMatrix[7] === side) {
 		generateMove = 1;
-	} else if (fieldMatrix[4] === side && fieldMatrix[7] === side) {
+	} else if (fieldMatrix[1] === side && fieldMatrix[7] === side) {
 		generateMove = 4;
 	} else if (fieldMatrix[2] === side && fieldMatrix[5] === side) {
 		generateMove = 8;
@@ -51,6 +51,18 @@ const moveGen = function (side) {
 		generateMove = 2;
 	} else if (fieldMatrix[2] === side && fieldMatrix[8] === side) {
 		generateMove = 5;
+	} else if (fieldMatrix[0] === side && fieldMatrix[4] === side) {
+		generateMove = 8;
+	} else if (fieldMatrix[4] === side && fieldMatrix[8] === side) {
+		generateMove = 0;
+	} else if (fieldMatrix[0] === side && fieldMatrix[8] === side) {
+		generateMove = 4;
+	} else if (fieldMatrix[2] === side && fieldMatrix[4] === side) {
+		generateMove = 6;
+	} else if (fieldMatrix[4] === side && fieldMatrix[6] === side) {
+		generateMove = 2;
+	} else if (fieldMatrix[2] === side && fieldMatrix[6] === side) {
+		generateMove = 4;
 	} else if (fieldMatrix[0] === oppSide && fieldMatrix[1] === oppSide) {
 		generateMove = 2;
 	} else if (fieldMatrix[1] === oppSide && fieldMatrix[2] === oppSide) {
@@ -79,7 +91,7 @@ const moveGen = function (side) {
 		generateMove = 7;
 	} else if (fieldMatrix[4] === oppSide && fieldMatrix[7] === oppSide) {
 		generateMove = 1;
-	} else if (fieldMatrix[4] === oppSide && fieldMatrix[7] === oppSide) {
+	} else if (fieldMatrix[1] === oppSide && fieldMatrix[7] === oppSide) {
 		generateMove = 4;
 	} else if (fieldMatrix[2] === oppSide && fieldMatrix[5] === oppSide) {
 		generateMove = 8;
@@ -87,6 +99,18 @@ const moveGen = function (side) {
 		generateMove = 2;
 	} else if (fieldMatrix[2] === oppSide && fieldMatrix[8] === oppSide) {
 		generateMove = 5;
+	} else if (fieldMatrix[0] === oppSide && fieldMatrix[4] === oppSide) {
+		generateMove = 8;
+	} else if (fieldMatrix[4] === oppSide && fieldMatrix[8] === oppSide) {
+		generateMove = 0;
+	} else if (fieldMatrix[0] === oppSide && fieldMatrix[8] === oppSide) {
+		generateMove = 4;
+	} else if (fieldMatrix[2] === oppSide && fieldMatrix[4] === oppSide) {
+		generateMove = 6;
+	} else if (fieldMatrix[4] === oppSide && fieldMatrix[6] === oppSide) {
+		generateMove = 2;
+	} else if (fieldMatrix[2] === oppSide && fieldMatrix[6] === oppSide) {
+		generateMove = 4;
 	} else generateMove = Math.trunc(Math.random() * 9);
 	while (moveCounter < 9) {
 		if (
