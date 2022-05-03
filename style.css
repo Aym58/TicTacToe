@@ -10,6 +10,12 @@ body {
 	background-color: #f4f6f4;
 }
 
+div,
+button {
+	max-width: 100%;
+	display: block;
+}
+
 .btn {
 	border: none;
 	display: block;

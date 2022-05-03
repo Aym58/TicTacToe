@@ -17,99 +17,287 @@ const moveGen = function (side) {
 	console.log(oppSide);
 	if (fieldMatrix[0] === side && fieldMatrix[1] === side) {
 		generateMove = 2;
-	} else if (fieldMatrix[1] === side && fieldMatrix[2] === side) {
+	} else if (
+		fieldMatrix[1] === side &&
+		fieldMatrix[2] === side &&
+		fieldMatrix[0] === ""
+	) {
 		generateMove = 0;
-	} else if (fieldMatrix[0] === side && fieldMatrix[2] === side) {
+	} else if (
+		fieldMatrix[0] === side &&
+		fieldMatrix[2] === side &&
+		fieldMatrix[1] === ""
+	) {
 		generateMove = 1;
-	} else if (fieldMatrix[3] === side && fieldMatrix[4] === side) {
+	} else if (
+		fieldMatrix[3] === side &&
+		fieldMatrix[4] === side &&
+		fieldMatrix[5] === ""
+	) {
 		generateMove = 5;
-	} else if (fieldMatrix[4] === side && fieldMatrix[5] === side) {
+	} else if (
+		fieldMatrix[4] === side &&
+		fieldMatrix[5] === side &&
+		fieldMatrix[3] === ""
+	) {
 		generateMove = 3;
-	} else if (fieldMatrix[3] === side && fieldMatrix[5] === side) {
+	} else if (
+		fieldMatrix[3] === side &&
+		fieldMatrix[5] === side &&
+		fieldMatrix[4] === ""
+	) {
 		generateMove = 4;
-	} else if (fieldMatrix[6] === side && fieldMatrix[7] === side) {
+	} else if (
+		fieldMatrix[6] === side &&
+		fieldMatrix[7] === side &&
+		fieldMatrix[8] === ""
+	) {
 		generateMove = 8;
-	} else if (fieldMatrix[7] === side && fieldMatrix[8] === side) {
+	} else if (
+		fieldMatrix[7] === side &&
+		fieldMatrix[8] === side &&
+		fieldMatrix[6] === ""
+	) {
 		generateMove = 6;
-	} else if (fieldMatrix[6] === side && fieldMatrix[8] === side) {
+	} else if (
+		fieldMatrix[6] === side &&
+		fieldMatrix[8] === side &&
+		fieldMatrix[7] === ""
+	) {
 		generateMove = 7;
-	} else if (fieldMatrix[0] === side && fieldMatrix[3] === side) {
+	} else if (
+		fieldMatrix[0] === side &&
+		fieldMatrix[3] === side &&
+		fieldMatrix[6] === ""
+	) {
 		generateMove = 6;
-	} else if (fieldMatrix[3] === side && fieldMatrix[6] === side) {
+	} else if (
+		fieldMatrix[3] === side &&
+		fieldMatrix[6] === side &&
+		fieldMatrix[0] === ""
+	) {
 		generateMove = 0;
-	} else if (fieldMatrix[0] === side && fieldMatrix[6] === side) {
+	} else if (
+		fieldMatrix[0] === side &&
+		fieldMatrix[6] === side &&
+		fieldMatrix[3] === ""
+	) {
 		generateMove = 3;
-	} else if (fieldMatrix[1] === side && fieldMatrix[4] === side) {
+	} else if (
+		fieldMatrix[1] === side &&
+		fieldMatrix[4] === side &&
+		fieldMatrix[7] === ""
+	) {
 		generateMove = 7;
-	} else if (fieldMatrix[4] === side && fieldMatrix[7] === side) {
+	} else if (
+		fieldMatrix[4] === side &&
+		fieldMatrix[7] === side &&
+		fieldMatrix[1] === ""
+	) {
 		generateMove = 1;
-	} else if (fieldMatrix[1] === side && fieldMatrix[7] === side) {
+	} else if (
+		fieldMatrix[1] === side &&
+		fieldMatrix[7] === side &&
+		fieldMatrix[4] === ""
+	) {
 		generateMove = 4;
-	} else if (fieldMatrix[2] === side && fieldMatrix[5] === side) {
+	} else if (
+		fieldMatrix[2] === side &&
+		fieldMatrix[5] === side &&
+		fieldMatrix[8] === ""
+	) {
 		generateMove = 8;
-	} else if (fieldMatrix[5] === side && fieldMatrix[8] === side) {
+	} else if (
+		fieldMatrix[5] === side &&
+		fieldMatrix[8] === side &&
+		fieldMatrix[2] === ""
+	) {
 		generateMove = 2;
-	} else if (fieldMatrix[2] === side && fieldMatrix[8] === side) {
+	} else if (
+		fieldMatrix[2] === side &&
+		fieldMatrix[8] === side &&
+		fieldMatrix[5] === ""
+	) {
 		generateMove = 5;
-	} else if (fieldMatrix[0] === side && fieldMatrix[4] === side) {
+	} else if (
+		fieldMatrix[0] === side &&
+		fieldMatrix[4] === side &&
+		fieldMatrix[8] === ""
+	) {
 		generateMove = 8;
-	} else if (fieldMatrix[4] === side && fieldMatrix[8] === side) {
+	} else if (
+		fieldMatrix[4] === side &&
+		fieldMatrix[8] === side &&
+		fieldMatrix[0] === ""
+	) {
 		generateMove = 0;
-	} else if (fieldMatrix[0] === side && fieldMatrix[8] === side) {
+	} else if (
+		fieldMatrix[0] === side &&
+		fieldMatrix[8] === side &&
+		fieldMatrix[4] === ""
+	) {
 		generateMove = 4;
-	} else if (fieldMatrix[2] === side && fieldMatrix[4] === side) {
+	} else if (
+		fieldMatrix[2] === side &&
+		fieldMatrix[4] === side &&
+		fieldMatrix[6] === ""
+	) {
 		generateMove = 6;
-	} else if (fieldMatrix[4] === side && fieldMatrix[6] === side) {
+	} else if (
+		fieldMatrix[4] === side &&
+		fieldMatrix[6] === side &&
+		fieldMatrix[2] === ""
+	) {
 		generateMove = 2;
-	} else if (fieldMatrix[2] === side && fieldMatrix[6] === side) {
+	} else if (
+		fieldMatrix[2] === side &&
+		fieldMatrix[6] === side &&
+		fieldMatrix[4] === ""
+	) {
 		generateMove = 4;
-	} else if (fieldMatrix[0] === oppSide && fieldMatrix[1] === oppSide) {
+	} else if (
+		fieldMatrix[0] === oppSide &&
+		fieldMatrix[1] === oppSide &&
+		fieldMatrix[2] === ""
+	) {
 		generateMove = 2;
-	} else if (fieldMatrix[1] === oppSide && fieldMatrix[2] === oppSide) {
+	} else if (
+		fieldMatrix[1] === oppSide &&
+		fieldMatrix[2] === oppSide &&
+		fieldMatrix[0] === ""
+	) {
 		generateMove = 0;
-	} else if (fieldMatrix[0] === oppSide && fieldMatrix[2] === oppSide) {
+	} else if (
+		fieldMatrix[0] === oppSide &&
+		fieldMatrix[2] === oppSide &&
+		fieldMatrix[1] === ""
+	) {
 		generateMove = 1;
-	} else if (fieldMatrix[3] === oppSide && fieldMatrix[4] === oppSide) {
+	} else if (
+		fieldMatrix[3] === oppSide &&
+		fieldMatrix[4] === oppSide &&
+		fieldMatrix[5] === ""
+	) {
 		generateMove = 5;
-	} else if (fieldMatrix[4] === oppSide && fieldMatrix[5] === oppSide) {
+	} else if (
+		fieldMatrix[4] === oppSide &&
+		fieldMatrix[5] === oppSide &&
+		fieldMatrix[3] === ""
+	) {
 		generateMove = 3;
-	} else if (fieldMatrix[3] === oppSide && fieldMatrix[5] === oppSide) {
+	} else if (
+		fieldMatrix[3] === oppSide &&
+		fieldMatrix[5] === oppSide &&
+		fieldMatrix[4] === ""
+	) {
 		generateMove = 4;
-	} else if (fieldMatrix[6] === oppSide && fieldMatrix[7] === oppSide) {
+	} else if (
+		fieldMatrix[6] === oppSide &&
+		fieldMatrix[7] === oppSide &&
+		fieldMatrix[8] === ""
+	) {
 		generateMove = 8;
-	} else if (fieldMatrix[7] === oppSide && fieldMatrix[8] === oppSide) {
+	} else if (
+		fieldMatrix[7] === oppSide &&
+		fieldMatrix[8] === oppSide &&
+		fieldMatrix[6] === ""
+	) {
 		generateMove = 6;
-	} else if (fieldMatrix[6] === oppSide && fieldMatrix[8] === oppSide) {
+	} else if (
+		fieldMatrix[6] === oppSide &&
+		fieldMatrix[8] === oppSide &&
+		fieldMatrix[7] === ""
+	) {
 		generateMove = 7;
-	} else if (fieldMatrix[0] === oppSide && fieldMatrix[3] === oppSide) {
+	} else if (
+		fieldMatrix[0] === oppSide &&
+		fieldMatrix[3] === oppSide &&
+		fieldMatrix[6] === ""
+	) {
 		generateMove = 6;
-	} else if (fieldMatrix[3] === oppSide && fieldMatrix[6] === oppSide) {
+	} else if (
+		fieldMatrix[3] === oppSide &&
+		fieldMatrix[6] === oppSide &&
+		fieldMatrix[0] === ""
+	) {
 		generateMove = 0;
-	} else if (fieldMatrix[0] === oppSide && fieldMatrix[6] === oppSide) {
+	} else if (
+		fieldMatrix[0] === oppSide &&
+		fieldMatrix[6] === oppSide &&
+		fieldMatrix[3] === ""
+	) {
 		generateMove = 3;
-	} else if (fieldMatrix[1] === oppSide && fieldMatrix[4] === oppSide) {
+	} else if (
+		fieldMatrix[1] === oppSide &&
+		fieldMatrix[4] === oppSide &&
+		fieldMatrix[7] === ""
+	) {
 		generateMove = 7;
-	} else if (fieldMatrix[4] === oppSide && fieldMatrix[7] === oppSide) {
+	} else if (
+		fieldMatrix[4] === oppSide &&
+		fieldMatrix[7] === oppSide &&
+		fieldMatrix[1] === ""
+	) {
 		generateMove = 1;
-	} else if (fieldMatrix[1] === oppSide && fieldMatrix[7] === oppSide) {
+	} else if (
+		fieldMatrix[1] === oppSide &&
+		fieldMatrix[7] === oppSide &&
+		fieldMatrix[4] === ""
+	) {
 		generateMove = 4;
-	} else if (fieldMatrix[2] === oppSide && fieldMatrix[5] === oppSide) {
+	} else if (
+		fieldMatrix[2] === oppSide &&
+		fieldMatrix[5] === oppSide &&
+		fieldMatrix[8] === ""
+	) {
 		generateMove = 8;
-	} else if (fieldMatrix[5] === oppSide && fieldMatrix[8] === oppSide) {
+	} else if (
+		fieldMatrix[5] === oppSide &&
+		fieldMatrix[8] === oppSide &&
+		fieldMatrix[2] === ""
+	) {
 		generateMove = 2;
-	} else if (fieldMatrix[2] === oppSide && fieldMatrix[8] === oppSide) {
+	} else if (
+		fieldMatrix[2] === oppSide &&
+		fieldMatrix[8] === oppSide &&
+		fieldMatrix[5] === ""
+	) {
 		generateMove = 5;
-	} else if (fieldMatrix[0] === oppSide && fieldMatrix[4] === oppSide) {
+	} else if (
+		fieldMatrix[0] === oppSide &&
+		fieldMatrix[4] === oppSide &&
+		fieldMatrix[8] === ""
+	) {
 		generateMove = 8;
-	} else if (fieldMatrix[4] === oppSide && fieldMatrix[8] === oppSide) {
+	} else if (
+		fieldMatrix[4] === oppSide &&
+		fieldMatrix[8] === oppSide &&
+		fieldMatrix[0] === ""
+	) {
 		generateMove = 0;
-	} else if (fieldMatrix[0] === oppSide && fieldMatrix[8] === oppSide) {
+	} else if (
+		fieldMatrix[0] === oppSide &&
+		fieldMatrix[8] === oppSide &&
+		fieldMatrix[4] === ""
+	) {
 		generateMove = 4;
-	} else if (fieldMatrix[2] === oppSide && fieldMatrix[4] === oppSide) {
+	} else if (
+		fieldMatrix[2] === oppSide &&
+		fieldMatrix[4] === oppSide &&
+		fieldMatrix[6] === ""
+	) {
 		generateMove = 6;
-	} else if (fieldMatrix[4] === oppSide && fieldMatrix[6] === oppSide) {
+	} else if (
+		fieldMatrix[4] === oppSide &&
+		fieldMatrix[6] === oppSide &&
+		fieldMatrix[2] === ""
+	) {
 		generateMove = 2;
-	} else if (fieldMatrix[2] === oppSide && fieldMatrix[6] === oppSide) {
+	} else if (
+		fieldMatrix[2] === oppSide &&
+		fieldMatrix[6] === oppSide &&
+		fieldMatrix[4] === ""
+	) {
 		generateMove = 4;
 	} else generateMove = Math.trunc(Math.random() * 9);
 	while (moveCounter < 9) {
